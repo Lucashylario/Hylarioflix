@@ -17,10 +17,10 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL_TOP = window.location.hostname.includes('localhost')
+    const URL = window.location.hostname.includes('localhost')
       ? 'https://localhost:8080/categorias'
-      : 'https://viniflix-alura.herokuapp.com/categorias';
-    fetch(URL_TOP)
+      : 'https://hylarioflix.herokuapp.com/categorias';
+    fetch(URL)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
