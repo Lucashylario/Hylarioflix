@@ -1,11 +1,12 @@
 import React from 'react';
 import { FooterBase } from './styles';
+import Logo from '../../assets/img/logo_flix.png'
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="/">
+        <img src={Logo} alt="Logo Viniflix" width="100%" />
       </a>
       <p>
         Orgulhosamente criado durante a

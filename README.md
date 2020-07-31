@@ -1,100 +1,63 @@
-## Pontos importantes da aula
+<h1 align="center">
+    <img alt="Alura" title="Alura" src="https://raw.githubusercontent.com/Vinidevsantos/viniflix/389e20f0ef56c57d1b99af2f96a3db790dafe69c/src/assets/img/alura-logo.svg" width="220px" />
+ <img alt="Imersao" title="Imersao" src="https://raw.githubusercontent.com/Vinidevsantos/viniflix/389e20f0ef56c57d1b99af2f96a3db790dafe69c/src/assets/img/Logo.imersao.react.svg" width="220px" />
+  
+</h1>
+<h1 align="center">
+<img alt="Viniflix" title="Viniflix" src="https://media1.giphy.com/media/MaUYkeDFaIEnpurjB0/giphy.gif" width="50%" />  
+</h1>
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto no formato através [desse link](<https://www.figma.com/file/rh7zm3wAz3SomVwby1iQYV/AluraFlix>). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
+
+## 🤔 Como contribuir
+
+- Faça um fork desse repositório;
+- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`.
+
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+
+--- 
+
+Made with ♥ by Vinicius Santos :wave: [Get in touch!](https://www.linkedin.com/in/vinidesousa/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[expo]: https://expo.io/
+[reactjs]: https://reactjs.org
+[rn]: https://facebook.github.io/react-native/
+[yarn]: https://yarnpkg.com/
+
+## 👨🏼‍💻Autor
+
+---
+
+<a  href="https://github.com/Vinidevsantos/">
+ <img src="https://avatars1.githubusercontent.com/u/62895999?s=460&u=90819b38224622bceb1b6f55d1bde2dae94d469f&v=4" width="100px;" style="border-radius:50%;" alt="Vini imagem"/>
+ <br />
+ <sub><b>Vinicius Santos</b></sub></a> <a href="https://github.com/Vinidevsantos/" title="Vinidevsantos">🚀</a>
 
 
-- Configurar o eslint, rodar na raíz do projeto:
+Feito com ❤️ por Vinicius Santos 👋🏽 Entre em contato!
 
-```js
-npx eslint --init
-```
 
-- Regra que alteramos na aula no arquivo .eslintrc.js
-
-```json
-{
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
-  }
-}
-```
-
-> Atenção!!! Pode ocorrer o exato bug do vídeo, nós resolvemos alterando a versão do eslint no package.json
-
-- Instalar os prop-types
-```js
-npm install prop-types
-````
-
-============================
-
-- Para criar sua conta na Heroku, acesse esse link: https://signup.heroku.com/login
-
-- Faça as configurações para criar um projeto como fizemos no vídeo, vá pausando para ficar mais fácil :)
-
-- Instalar o Json Server: https://github.com/typicode/json-server
-
-```js
-npm install json-server
-````
-
-- Você pode pegar o modelo do DB Json aqui nesse gist, lembre-se de que você precisa ter pelo menos essa estrutura básica:
-
-```js
-{
-  "categorias": [
-    {
-      "id": 1,
-      "titulo": "Front End",
-      "cor": "#6BD1FF",
-      "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
-    }
-   ],
-  "videos": [
-    {
-      "id": 1,
-      "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
-    }
-  ]
-}
-```
-
-- O código do arquivo server.js ta aqui:
-
-```js
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults()
-
-const port = process.env.PORT || 8080;
-
-server.use(middlewares)
-server.use(router)
-server.listen(port, () => {
-  console.log(`JSON Server is running in ${port}`)
-}) 
-```
-
-- Para rodar tudo junto, lembre-se se instalar:
-
-```sh
-npm install --save-dev concurrently
-```
-
-- E de alterar os scripts no package.json
-
-```json
-"scripts": {
-  "start": "node ./server.js",
-  "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "server:static": "json-server --watch ./src/data/db.json --port 8080",
-  "server": "node ./server.js"
-},
-```
+[![Twitter Badge](https://img.shields.io/badge/-@ViniSantosDev-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/ViniSantosDev)](https://twitter.com/ViniSantosDev)
+[![Linkedin Badge](https://img.shields.io/badge/-Vinicius-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vinidevsantos/)](https://www.linkedin.com/in/vinidevsantos/) 
+[![Gmail Badge](https://img.shields.io/badge/-santosvini.rv@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:santosvini.rv@gmail.com)](mailto:santosvini.rv@gmail.com)
+![GitHub followers](https://img.shields.io/github/followers/vinidevsantos?style=social)

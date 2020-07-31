@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, {Component}  from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
 const Container = styled.ul`
+
   padding: 0;
   margin: 0;
   .slick-prev,
@@ -36,14 +37,14 @@ export const SliderItem = styled.li`
     height: 197px;
     object-fit: cover;
   }
-`;
 
+`;
 
 const Slider = ({ children }) => (
   <Container>
     <SlickSlider {...{
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 300,
       centerMode: false,
       variableWidth: true,
