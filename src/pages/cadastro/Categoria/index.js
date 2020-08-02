@@ -17,16 +17,35 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-      ? 'https://localhost:8080/categorias'
-      : 'https://hylarioflix.herokuapp.com/categorias';
-    fetch(URL)
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://devsoutinhoflix.herokuapp.com/categorias';
+    // E a ju ama variáveis
+    fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
           ...resposta,
         ]);
       });
+
+    // setTimeout(() => {
+    //   setCategorias([
+    //     ...categorias,
+    //     {
+    //       id: 1,
+    //       nome: 'Front End',
+    //       descricao: 'Uma categoria bacanudassa',
+    //       cor: '#cbd1ff',
+    //     },
+    //     {
+    //       id: 2,
+    //       nome: 'Back End',
+    //       descricao: 'Outra categoria bacanudassa',
+    //       cor: '#cbd1ff',
+    //     },
+    //   ]);
+    // }, 4 * 1000);
   }, []);
 
   return (
@@ -38,7 +57,6 @@ function CadastroCategoria() {
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
         infosDoEvento.preventDefault();
-
         setCategorias([
           ...categorias,
           values,
@@ -50,14 +68,13 @@ function CadastroCategoria() {
 
         <FormField
           label="Nome da Categoria"
-          type="text"
           name="nome"
           value={values.nome}
           onChange={handleChange}
         />
 
         <FormField
-          label="Descricao"
+          label="Descrição"
           type="textarea"
           name="descricao"
           value={values.descricao}
@@ -79,6 +96,7 @@ function CadastroCategoria() {
 
       {categorias.length === 0 && (
         <div>
+          {/* Cargando... */}
           Loading...
         </div>
       )}
